@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { ProjectImage } from "./ProjectImage";
 
 export function Projects() {
   const { dictionary } = useLanguage();
@@ -25,6 +26,7 @@ export function Projects() {
               key={project.title}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-accent/40"
             >
+              {project.image && <ProjectImage image={project.image} />}
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-xl font-semibold text-white">
                   {project.title}

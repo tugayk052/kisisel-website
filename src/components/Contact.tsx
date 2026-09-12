@@ -19,12 +19,24 @@ export function Contact() {
         <p className="mt-4 text-lg text-zinc-400">{contact.subheading}</p>
 
         <div className="mt-10 flex flex-col items-center gap-6">
-          <a
-            href={`mailto:${site.email}`}
-            className="rounded-md bg-accent px-8 py-3 text-sm font-semibold text-zinc-950 transition-opacity hover:opacity-90"
-          >
-            {contact.emailLabel}: {site.email}
-          </a>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href={`mailto:${site.email}`}
+              className="rounded-md bg-accent px-8 py-3 text-sm font-semibold text-zinc-950 transition-opacity hover:opacity-90"
+            >
+              {contact.emailLabel}: {site.email}
+            </a>
+            {site.whatsappNumber && (
+              <a
+                href={`https://wa.me/${site.whatsappNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md border border-white/15 px-8 py-3 text-sm font-semibold text-white transition-colors hover:border-white/30 hover:bg-white/5"
+              >
+                {contact.whatsappLabel}
+              </a>
+            )}
+          </div>
 
           <div>
             <h3 className="text-xs font-semibold tracking-widest text-zinc-500 uppercase">

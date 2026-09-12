@@ -1,10 +1,13 @@
 export type Language = "tr" | "en";
 
+export type ProjectImage = "bathroom" | "weather";
+
 export type Project = {
   title: string;
   description: string;
   tags: string[];
   status: string;
+  image?: ProjectImage;
 };
 
 export type Dictionary = {
@@ -16,6 +19,7 @@ export type Dictionary = {
     about: string;
     services: string;
     projects: string;
+    blog: string;
     contact: string;
   };
   hero: {
@@ -52,6 +56,7 @@ export type Dictionary = {
     heading: string;
     subheading: string;
     emailLabel: string;
+    whatsappLabel: string;
     socialsHeading: string;
   };
   footer: {
@@ -71,6 +76,7 @@ export const dictionaries: Record<Language, Dictionary> = {
       about: "Hakkımda",
       services: "Hizmetler",
       projects: "Projeler",
+      blog: "Blog",
       contact: "İletişim",
     },
     hero: {
@@ -94,6 +100,8 @@ export const dictionaries: Record<Language, Dictionary> = {
       skills: [
         "JavaScript / TypeScript",
         "React & Next.js",
+        "Mobil Uygulama Geliştirme",
+        "Web Tasarım",
         "Otomasyon",
         "Yapay Zeka Araçları",
         "UI/UX",
@@ -134,6 +142,7 @@ export const dictionaries: Record<Language, Dictionary> = {
             "Yapay zeka destekli görsel üretim ile banyo iç mekanları için yeniden tasarım önerileri oluşturan bir araç.",
           tags: ["Yapay Zeka", "Görsel Üretim", "PowerShell"],
           status: "Geliştirme aşamasında",
+          image: "bathroom",
         },
         {
           title: "Hava Durumu PWA",
@@ -141,6 +150,7 @@ export const dictionaries: Record<Language, Dictionary> = {
             "Türkiye'deki şehirler için, o şehre ait simge fotoğraflarla zenginleştirilmiş bir hava durumu uygulaması (PWA).",
           tags: ["PWA", "JavaScript", "Service Worker"],
           status: "Yayında",
+          image: "weather",
         },
         {
           title: "Kişisel Web Sitesi",
@@ -164,6 +174,7 @@ export const dictionaries: Record<Language, Dictionary> = {
       subheading:
         "Bir proje fikrin mi var, yoksa sadece merhaba mı demek istiyorsun? Aşağıdaki kanallardan ulaşabilirsin.",
       emailLabel: "E-posta",
+      whatsappLabel: "WhatsApp'tan Yaz",
       socialsHeading: "Sosyal medya",
     },
     footer: {
@@ -181,6 +192,7 @@ export const dictionaries: Record<Language, Dictionary> = {
       about: "About",
       services: "Services",
       projects: "Projects",
+      blog: "Blog",
       contact: "Contact",
     },
     hero: {
@@ -204,6 +216,8 @@ export const dictionaries: Record<Language, Dictionary> = {
       skills: [
         "JavaScript / TypeScript",
         "React & Next.js",
+        "Mobile App Development",
+        "Web Design",
         "Automation",
         "AI Tooling",
         "UI/UX",
@@ -244,6 +258,7 @@ export const dictionaries: Record<Language, Dictionary> = {
             "An AI-assisted image generation tool that suggests redesign ideas for bathroom interiors.",
           tags: ["AI", "Image Generation", "PowerShell"],
           status: "In progress",
+          image: "bathroom",
         },
         {
           title: "Weather PWA",
@@ -251,6 +266,7 @@ export const dictionaries: Record<Language, Dictionary> = {
             "A weather app for Turkish cities, enriched with landmark photos for each city, built as a PWA.",
           tags: ["PWA", "JavaScript", "Service Worker"],
           status: "Live",
+          image: "weather",
         },
         {
           title: "Personal Website",
@@ -274,6 +290,7 @@ export const dictionaries: Record<Language, Dictionary> = {
       subheading:
         "Have a project idea, or just want to say hi? Reach out through any of the channels below.",
       emailLabel: "Email",
+      whatsappLabel: "Message on WhatsApp",
       socialsHeading: "Social",
     },
     footer: {
