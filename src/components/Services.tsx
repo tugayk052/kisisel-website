@@ -19,7 +19,7 @@ export function Services() {
           {services.subheading}
         </p>
 
-        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-3">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {services.items.map((service, index) => (
             <div key={service.title} className="bg-zinc-950 p-6">
               <span className="font-mono text-sm text-zinc-600">

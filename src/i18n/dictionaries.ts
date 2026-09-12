@@ -127,6 +127,11 @@ export const dictionaries: Record<Language, Dictionary> = {
           description:
             "Mevcut ürünlere veya iş akışlarına yapay zeka destekli özellikler entegre ediyorum.",
         },
+        {
+          title: "Mobil Uygulama",
+          description:
+            "React Native ile iOS ve Android için tek kod tabanından performanslı mobil uygulamalar geliştiriyorum.",
+        },
       ],
     },
     projects: {
@@ -242,6 +247,11 @@ export const dictionaries: Record<Language, Dictionary> = {
           title: "AI Integration",
           description:
             "I integrate AI-powered features into existing products or workflows.",
+        },
+        {
+          title: "Mobile Apps",
+          description:
+            "I build performant iOS and Android apps from a single codebase with React Native.",
         },
       ],
     },
