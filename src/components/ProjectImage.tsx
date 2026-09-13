@@ -5,6 +5,7 @@ const IMAGE_MAP: Record<ProjectImageKey, { src: string; position: string }> = {
   bathroom: { src: "/projects/banyo-tasarim.png", position: "object-center" },
   weather: { src: "/projects/hava-durumu.png", position: "object-top" },
   qrmenu: { src: "/projects/qr-menu.png", position: "object-top" },
+  berber: { src: "/projects/berber-randevu.png", position: "object-top" },
 };
 
 export function ProjectImage({ image }: { image: ProjectImageKey }) {

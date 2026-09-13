@@ -48,9 +48,23 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-              <p className="mt-5 text-xs font-medium text-zinc-500">
-                {projects.comingSoon}
-              </p>
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-accent/80"
+                >
+                  {projects.viewSite}
+                  <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
+                    →
+                  </span>
+                </a>
+              ) : (
+                <p className="mt-5 text-xs font-medium text-zinc-500">
+                  {projects.comingSoon}
+                </p>
+              )}
             </article>
           ))}
         </div>

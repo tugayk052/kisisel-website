@@ -1,6 +1,6 @@
 export type Language = "tr" | "en";
 
-export type ProjectImage = "bathroom" | "weather" | "qrmenu";
+export type ProjectImage = "bathroom" | "weather" | "qrmenu" | "berber";
 
 export type Project = {
   title: string;
@@ -8,6 +8,7 @@ export type Project = {
   tags: string[];
   status: string;
   image?: ProjectImage;
+  link?: string;
 };
 
 export type Dictionary = {
@@ -49,6 +50,7 @@ export type Dictionary = {
     heading: string;
     subheading: string;
     comingSoon: string;
+    viewSite: string;
     items: Project[];
   };
   contact: {
@@ -137,9 +139,9 @@ export const dictionaries: Record<Language, Dictionary> = {
     projects: {
       eyebrow: "Portföy",
       heading: "Projelerim",
-      subheading:
-        "Üzerinde çalıştığım bazı projeler. Her biri hakkında daha fazla bilgiyi ve canlı bağlantıları yakında ekleyeceğim.",
+      subheading: "Üzerinde çalıştığım bazı projeler.",
       comingSoon: "Bağlantılar yakında",
+      viewSite: "Siteyi Gör",
       items: [
         {
           title: "Banyo Tasarım Asistanı",
@@ -171,6 +173,16 @@ export const dictionaries: Record<Language, Dictionary> = {
           tags: ["QR Menü", "JavaScript", "Vercel"],
           status: "Yayında",
           image: "qrmenu",
+          link: "https://menu.tugaykilic.com",
+        },
+        {
+          title: "Berber Randevu Sistemi",
+          description:
+            "Berber dükkanları için geliştirdiğim, Firebase tabanlı canlı randevu sistemi. Müşteriler berber/hizmet/tarih seçip anında randevu alıyor; admin panelinde saatlik randevu takvimi, berber/hizmet yönetimi ve günlük kasa takibi var.",
+          tags: ["Firebase", "JavaScript", "Vercel"],
+          status: "Yayında",
+          image: "berber",
+          link: "https://randevu.tugaykilic.com",
         },
       ],
     },
@@ -259,9 +271,9 @@ export const dictionaries: Record<Language, Dictionary> = {
     projects: {
       eyebrow: "Portfolio",
       heading: "My Projects",
-      subheading:
-        "A few things I've been working on. Live links and more details for each are coming soon.",
+      subheading: "A few things I've been working on.",
       comingSoon: "Links coming soon",
+      viewSite: "View Site",
       items: [
         {
           title: "Bathroom Design Assistant",
@@ -293,6 +305,16 @@ export const dictionaries: Record<Language, Dictionary> = {
           tags: ["QR Menu", "JavaScript", "Vercel"],
           status: "Live",
           image: "qrmenu",
+          link: "https://menu.tugaykilic.com",
+        },
+        {
+          title: "Barber Appointment System",
+          description:
+            "A Firebase-backed live booking system for barbershops. Customers pick a barber/service/date and book instantly; the admin panel has an hourly appointment calendar, barber/service management, and daily cash tracking.",
+          tags: ["Firebase", "JavaScript", "Vercel"],
+          status: "Live",
+          image: "berber",
+          link: "https://randevu.tugaykilic.com",
         },
       ],
     },
