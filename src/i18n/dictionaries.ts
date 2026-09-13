@@ -1,6 +1,6 @@
 export type Language = "tr" | "en";
 
-export type ProjectImage = "bathroom" | "weather";
+export type ProjectImage = "bathroom" | "weather" | "qrmenu";
 
 export type Project = {
   title: string;
@@ -165,11 +165,12 @@ export const dictionaries: Record<Language, Dictionary> = {
           status: "Yayında",
         },
         {
-          title: "Sıradaki Proje",
+          title: "X Cafe QR Menü",
           description:
-            "Bu alan bir sonraki projem için ayrıldı. Yeni bir şey tamamlandığında burada yerini alacak.",
-          tags: ["Yakında"],
-          status: "Planlanıyor",
+            "Kafeler için geliştirdiğim, kategorilere ayrılmış, fotoğraflı ve mobil uyumlu dijital QR menü. Müşteriler QR kodu okutarak menüye anında ulaşıyor.",
+          tags: ["QR Menü", "JavaScript", "Vercel"],
+          status: "Yayında",
+          image: "qrmenu",
         },
       ],
     },
@@ -286,11 +287,12 @@ export const dictionaries: Record<Language, Dictionary> = {
           status: "Live",
         },
         {
-          title: "Next Project",
+          title: "X Cafe QR Menu",
           description:
-            "This spot is reserved for what I build next. Check back once something new is ready.",
-          tags: ["Coming soon"],
-          status: "Planned",
+            "A category-organized, photo-rich, mobile-friendly digital QR menu built for cafés. Customers scan a QR code to instantly view the menu.",
+          tags: ["QR Menu", "JavaScript", "Vercel"],
+          status: "Live",
+          image: "qrmenu",
         },
       ],
     },
