@@ -17,6 +17,19 @@ export function Hero() {
 
       <div className="mx-auto grid w-full max-w-5xl items-center gap-12 px-6 lg:grid-cols-[1fr_auto]">
         <div>
+          <div className="mb-6 flex justify-center lg:hidden">
+            <div className="relative h-32 w-32 overflow-hidden rounded-full border border-accent/30">
+              <Image
+                src="/avatar.jpg"
+                alt={site.name}
+                fill
+                sizes="128px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium text-zinc-300">
             <span className="relative flex h-2 w-2">
               <span className="animate-pulse-dot absolute inline-flex h-full w-full rounded-full bg-accent" />
